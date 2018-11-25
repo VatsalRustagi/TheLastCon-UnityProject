@@ -73,6 +73,8 @@
     <Compile Include="Assets\Scripts\PlayerInGasStationAfterItem.cs" />
     <Compile Include="Assets\Scripts\PlayerInGasStationStore.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\PlayerTheLastConBedroom.cs" />
+    <Compile Include="Assets\Scripts\SafeLogic.cs" />
     <Compile Include="Assets\Scripts\StaticGameData.cs" />
     <Compile Include="Assets\Scripts\StorylineUpdates.cs" />
     <Reference Include="UnityEditor.StandardEvents">

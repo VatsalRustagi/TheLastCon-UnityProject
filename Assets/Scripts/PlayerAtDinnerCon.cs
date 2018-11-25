@@ -126,7 +126,7 @@ public class PlayerAtDinnerCon : MonoBehaviour {
                     restartGame = true;
                 }
 
-                if (isDialogueDone(marieDialoagues) && conversations.Length > currentIndex) {
+                if (isDialogueDone(marieDialoagues) && conversations.Length > currentIndex && restartGame == false) {
                     setActiveButtons(true);
                 }
             }
