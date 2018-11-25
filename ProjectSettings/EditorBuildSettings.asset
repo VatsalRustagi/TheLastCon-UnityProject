@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Gas Station Store Con.unity
     guid: b3735341c1f0743e69e68d9f49fd24cb
+  - enabled: 1
+    path: Assets/Scenes/Planning the Con Scene.unity
+    guid: 13f0acaa8644a4cf094bda060105d7f5
+  - enabled: 1
+    path: Assets/Scenes/Final Con DInner Scene.unity
+    guid: b5ec0d89f3bdc490395905ba3931fc2b
   m_configObjects: {}

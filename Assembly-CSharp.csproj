@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{A786ABD0-C351-795A-6D17-3A6109E4F558}</ProjectGuid>
+    <ProjectGuid>{32C6CF5D-6B8A-6088-EAFB-A38636778A17}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -66,7 +66,9 @@
     <Compile Include="Assets\Scripts\newGame.cs" />
     <Compile Include="Assets\Scripts\ParkingLot\GrabItem.cs" />
     <Compile Include="Assets\Scripts\ParkingLot\PlayerInParkingLot.cs" />
+    <Compile Include="Assets\Scripts\PlanningTheCon.cs" />
     <Compile Include="Assets\Scripts\PlayerActions.cs" />
+    <Compile Include="Assets\Scripts\PlayerAtDinnerCon.cs" />
     <Compile Include="Assets\Scripts\PlayerInGasStation.cs" />
     <Compile Include="Assets\Scripts\PlayerInGasStationAfterItem.cs" />
     <Compile Include="Assets\Scripts\PlayerInGasStationStore.cs" />
@@ -74,16 +76,16 @@
     <Compile Include="Assets\Scripts\StaticGameData.cs" />
     <Compile Include="Assets\Scripts\StorylineUpdates.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>/Users/vishnumanivannan/Desktop/The last con v1.1/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>/Users/vishnumanivannan/Desktop/TheLastCon-UnityProject/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/vishnumanivannan/Desktop/The last con v1.1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/vishnumanivannan/Desktop/TheLastCon-UnityProject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>/Users/vishnumanivannan/Desktop/The last con v1.1/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>/Users/vishnumanivannan/Desktop/TheLastCon-UnityProject/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/vishnumanivannan/Desktop/The last con v1.1/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/vishnumanivannan/Desktop/TheLastCon-UnityProject/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

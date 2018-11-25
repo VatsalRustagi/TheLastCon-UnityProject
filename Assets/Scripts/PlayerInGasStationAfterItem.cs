@@ -16,7 +16,7 @@ public class PlayerInGasStationAfterItem : MonoBehaviour {
     string[] dialogues = {"Kyle: Hey I got the item from my car!",
         "Stranger: Good! So here's the plan, lets do a pigeon drop with the item on" +
         " the clerk inside",
-        "Kyle: Yeah sounds good! You make the call and I'll take car of 'finding' the item",
+        "Kyle: Yeah sounds good! You make the call and I'll take care of 'finding' the item",
         "Stranger: Sounds like a plan! I'll make the call now"
     };
 
