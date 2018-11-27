@@ -35,4 +35,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final Con DInner Scene.unity
     guid: b5ec0d89f3bdc490395905ba3931fc2b
+  - enabled: 1
+    path: Assets/Scenes/The Last Con.unity
+    guid: 60e40cd6cdfdc4e02a53cf5eaf5a17f5
+  - enabled: 1
+    path: Assets/Scenes/Safe Scene.unity
+    guid: 35aa1320645c54cf8a73d1226ff73e1e
   m_configObjects: {}

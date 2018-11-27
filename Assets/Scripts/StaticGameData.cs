@@ -7,6 +7,8 @@ public class StaticGameData : MonoBehaviour {
     public static bool didGetWatch = false;
     public static bool didGetRing = false;
 
+    public static bool didGetEgg = false;
+
     // Use this for initialization
     void Start () {
 		

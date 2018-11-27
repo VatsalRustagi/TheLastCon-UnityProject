@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SafeLogic : MonoBehaviour {
     [SerializeField] Text code;
@@ -26,8 +27,13 @@ public class SafeLogic : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyUp(KeyCode.Space) && egg.IsActive()) {
+        if (Input.GetKeyUp(KeyCode.Space)) {
+            if (egg.IsActive()) {
+                StaticGameData.didGetEgg = true;
+            }
 
+            var nextIndex = SceneManager.GetActiveScene().buildIndex - 1;
+            SceneManager.LoadScene(nextIndex);
         }
 	}
 

@@ -14,11 +14,20 @@ public class PlayerTheLastConBedroom : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        if (StaticGameData.didGetEgg)
+        {
+            closet.sprite = openCloset;
+        }
         note.gameObject.SetActive(false);
     }
 	
 	// Update is called once per frame
 	void Update () {
+        if(StaticGameData.didGetEgg) {
+            instructions.text = "You have the egg now, find a way to exit the Marie's house";
+            return;
+        }
+
         if(isNearNote()) {
             instructions.text = "Press [Space Bar] to read note";
             if(Input.GetKeyUp(KeyCode.Space)) {
