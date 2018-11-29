@@ -26,11 +26,14 @@ public class StorylineUpdates : MonoBehaviour {
         index = 0;
         storyText.text = storylines[index];
         continueGame = false;
+        var animator = mainCharacter.GetComponent<Animator>();
+        var animator2 = mainCharacter.GetComponent<Animator>();
+        animator.SetBool("Walking", true);
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (Time.time - lastTime > 1.0 && index < storylines.Length - 1) {
+        if (Time.time - lastTime > 2.0 && index < storylines.Length - 1) {
             storyText.text = storylines[++index];
             lastTime = Time.time;
         } else if (index == storylines.Length -1 && Input.GetKeyDown(KeyCode.Space) && continueGame == false) {

@@ -40,11 +40,14 @@ public class PlayerActions : MonoBehaviour {
             }
         }
         else {
-            textObj.text = "Welcome to The Last Con! This level " +
-                "will take you through the basic controls in this game. " +
-                "Use the right and left arrows to move about the room. " +
-                "As you get close to some objects " +
-                "you will have the option to interact with them";
+            if (!bottleFell)
+            {
+                textObj.text = "Welcome to The Last Con! This level " +
+                    "will take you through the basic controls in this game. " +
+                    "Use the right and left arrows to move about the room. " +
+                    "As you get close to some objects " +
+                    "you will have the option to interact with them";
+            }
         }
 
         Debug.Log(transform.position.x);
