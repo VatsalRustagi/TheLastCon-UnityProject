@@ -27,8 +27,9 @@ public class StorylineUpdates : MonoBehaviour {
         storyText.text = storylines[index];
         continueGame = false;
         var animator = mainCharacter.GetComponent<Animator>();
-        var animator2 = mainCharacter.GetComponent<Animator>();
+        var animator2 = otherCharacter.GetComponent<Animator>();
         animator.SetBool("Walking", true);
+        animator2.SetBool("Walking", true);
     }
 	
 	// Update is called once per frame

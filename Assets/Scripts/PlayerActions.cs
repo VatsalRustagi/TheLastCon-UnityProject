@@ -17,7 +17,7 @@ public class PlayerActions : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        var rt = (RectTransform)transform;
+        var rt = (RectTransform) transform;
         var width = rt.rect.width;
         Debug.Log("Width" + width);
         // Checks whether the player is close to the bottle

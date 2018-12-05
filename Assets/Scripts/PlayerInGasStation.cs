@@ -30,7 +30,7 @@ public class PlayerInGasStation : MonoBehaviour {
     void Update () {
         var width = GetComponent<UnityEngine.UI.Image>().sprite.rect.width;
 
-        if (!playersMet && transform.position.x - twinPlayer.transform.position.x >= width / 2)
+        if (!playersMet && transform.position.x - twinPlayer.transform.position.x >= width / 2 + 50)
         {
             Debug.Log("Player is moving");
             twinPlayer.transform.Translate(5f, 0f, 0f);
@@ -64,6 +64,6 @@ public class PlayerInGasStation : MonoBehaviour {
     }
 
     bool DidReachEndOfScreen() {
-        return transform.position.x >= Screen.width;
+        return transform.position.x <= 0;
     }
 }

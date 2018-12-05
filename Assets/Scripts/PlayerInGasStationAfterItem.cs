@@ -30,12 +30,12 @@ public class PlayerInGasStationAfterItem : MonoBehaviour {
         var rt = (RectTransform)transform;
         var width = GetComponent<UnityEngine.UI.Image>().sprite.rect.width;
 
-        if(Mathf.Abs(transform.position.x - twinPlayer.transform.position.x) <= width / 2) 
+        if(Mathf.Abs(transform.position.x - twinPlayer.transform.position.x) <= width / 2 + 50 && !doneMakingTheCall) 
         {
             if(!playersAreClose) 
             {
                 subtitles.text = "You are now close enough to talk to your " +
-                    "future self. Press the space bar to have a converstion.";
+                    "future self. Keep pressing the [Space Bar] slowly to have a converstion.";
                 playersAreClose = true;
             }
 
@@ -48,11 +48,11 @@ public class PlayerInGasStationAfterItem : MonoBehaviour {
                 doneMakingTheCall = true;
             }
         }
-        else if(doneMakingTheCall) {
+        else if(doneMakingTheCall && Screen.width - transform.position.x <= 350) {
             var nextIndex = SceneManager.GetActiveScene().buildIndex + 1;
             SceneManager.LoadScene(nextIndex);
         }
-        else
+        else if(!doneMakingTheCall)
         {
             playersAreClose = false;
             subtitles.text = "Move towards your future self to talk and plan out the con.";
