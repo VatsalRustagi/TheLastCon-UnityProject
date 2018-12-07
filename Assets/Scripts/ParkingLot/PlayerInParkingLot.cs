@@ -28,7 +28,7 @@ public class PlayerInParkingLot : MonoBehaviour {
 	void Update () {
         bool itemPickedUp = StaticGameData.didGetNecklace || StaticGameData.didGetRing || StaticGameData.didGetWatch;
         if (IsNearCar()) {
-            if (!isTrunkOpen && (Input.GetKeyUp(KeyCode.Space)))
+            if (!isTrunkOpen && !itemPickedUp && (Input.GetKeyUp(KeyCode.Space)))
             {
                 // Open the trunk here
                 car.sprite = carTrunkOpen;
