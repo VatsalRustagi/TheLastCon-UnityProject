@@ -93,6 +93,9 @@
     <Compile Include="Assets\Scripts\PlayerInGasStation.cs" />
     <Compile Include="Assets\Scripts\PlayerInGasStationAfterItem.cs" />
     <Compile Include="Assets\Scripts\PlayerInGasStationStore.cs" />
+    <Compile Include="Assets\Scripts\PlayerInMarieHouse.cs" />
+    <Compile Include="Assets\Scripts\PlayerInMotel.cs" />
+    <Compile Include="Assets\Scripts\PlayerMafiaConfrontation.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerTheLastConBedroom.cs" />
     <Compile Include="Assets\Scripts\SafeLogic.cs" />

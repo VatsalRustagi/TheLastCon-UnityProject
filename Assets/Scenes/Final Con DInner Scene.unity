@@ -246,8 +246,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.1, y: 433.92}
-  m_SizeDelta: {x: 1853.4, y: 212.15}
+  m_AnchoredPosition: {x: -204.93, y: 433.92}
+  m_SizeDelta: {x: 1510.2, y: 212.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &253479796
 MonoBehaviour:
@@ -281,9 +281,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "You've made it to the last level of the game! Your future self has different
-    objects that can be used to initiate the conversation with Mari\xE9. Pick one
-    of them and go impress her\n"
+  m_Text: "You're at Alin\xE9a now. Move towards Mari\xE9 and initiate a conversation.\n"
 --- !u!222 &253479797
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -392,8 +390,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 382.8, y: -303.15}
-  m_SizeDelta: {x: 149.8, y: 473.7}
+  m_AnchoredPosition: {x: 331.6, y: -286.7}
+  m_SizeDelta: {x: 206.1, y: 506.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &486823451
 MonoBehaviour:
@@ -414,7 +412,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 76377099d5d6a456c8666308a9aa46c3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 451131621c3df474c934ec2f6f6e4b0e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

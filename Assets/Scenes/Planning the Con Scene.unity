@@ -428,14 +428,14 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 4
     m_MaxSize: 69
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'After pulling off the con in the gas station, both the Kyle''s meet up
-    to plan for the last con. Press the space bar to initiate and continue the conversation.
+  m_Text: 'After pulling off the con in the gas station, both the Connor''s meet up
+    to plan for the last con. Press [Space Bar] to initiate and continue the conversation.
 
 '
 --- !u!222 &586772801

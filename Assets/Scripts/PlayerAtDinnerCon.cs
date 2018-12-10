@@ -66,18 +66,11 @@ public class PlayerAtDinnerCon : MonoBehaviour {
 
     string restartText = "You have failed to impress her. Press [Space Bar] to restart this level now.";
 
-    Queue<string> playerDialogues = new Queue<string>(new[]
-    {
-        "Future Self: So that right there is Marié. Head over and talk to her",
-        "Kyle: Ok gotcha, wait here let me get us invited to her place",
-        "Use the arrow keys to move towards Marié and initiate a conversation"
-    });
-
     Queue<string> marieDialoagues = new Queue<string>(new[]
     {
-        "Kyle: Hey! Can I get you a drink?",
+        "Connor: Hey! Can I get you a drink?",
         "Marié: Sure. Surprise me!",
-        "Choose a drink to impress Marie"
+        "Choose a drink to impress Marié"
     });
 
     bool restartGame = false;
@@ -99,10 +92,10 @@ public class PlayerAtDinnerCon : MonoBehaviour {
        
         Vector3 position = GetComponent<UnityEngine.UI.Image>().transform.position;
 
-        if (!isDialogueDone(marieDialoagues) && isDialogueDone(playerDialogues) && !isNearMarie() && !marieConversationStarted) {
-            subtitle.text = "Use the arrow keys to move towards Marié and initiate a conversation";
-        } else if (!isDialogueDone(marieDialoagues) && isDialogueDone(playerDialogues) && isNearMarie() && !marieConversationStarted) {
-            subtitle.text = "You're near Marie, press [Space Bar] to begin conversation";
+        if (!isDialogueDone(marieDialoagues) && !isNearMarie() && !marieConversationStarted) {
+            subtitle.text = "You're at Alinéa now. Move towards Marié and initiate a conversation.";
+        } else if (!isDialogueDone(marieDialoagues) && isNearMarie() && !marieConversationStarted) {
+            subtitle.text = "You're near Marié, press [Space Bar] to talk to her";
         }
 
         if (Input.GetKeyUp(KeyCode.Space)) 
@@ -113,11 +106,7 @@ public class PlayerAtDinnerCon : MonoBehaviour {
                 SceneManager.LoadScene(nextIndex);
             }
 
-            if (!isDialogueDone(playerDialogues))
-            {
-                subtitle.text = playerDialogues.Dequeue();
-            }
-            else if (!isDialogueDone(marieDialoagues) && isNearMarie())
+            if (!isDialogueDone(marieDialoagues) && isNearMarie())
             {
                 subtitle.text = marieDialoagues.Dequeue();
                 marieConversationStarted = true;
@@ -130,6 +119,12 @@ public class PlayerAtDinnerCon : MonoBehaviour {
                     setActiveButtons(true);
                 }
             }
+
+        }
+
+        if(currentIndex >= conversations.Length && isDialogueDone(marieDialoagues)) {
+            var nextIndex = SceneManager.GetActiveScene().buildIndex + 1;
+            SceneManager.LoadScene(nextIndex);
         }
 	}
 
@@ -139,7 +134,8 @@ public class PlayerAtDinnerCon : MonoBehaviour {
     }
 
     bool isNearMarie() {
-        bool result = (int)Mathf.Abs(transform.position.x - woman.transform.position.x) <= 100;
+        var width = GetComponent<UnityEngine.UI.Image>().sprite.rect.width;
+        bool result = (int)Mathf.Abs(transform.position.x - woman.transform.position.x) <= width + 50;
 
         return result;
     }
@@ -158,7 +154,7 @@ public class PlayerAtDinnerCon : MonoBehaviour {
             currentIndex++;
         } 
         else {
-            subtitle.text = "Hmm...that's an interesting choice";
+            subtitle.text = "Hmm...that's interesting I guess";
             marieDialoagues.Enqueue(restartText);
         }
     }
@@ -191,20 +187,35 @@ public class PlayerAtDinnerCon : MonoBehaviour {
     }
 
     void initializeConversations() {
-        Queue<string> conversation1 = new Queue<string>(new[]
+        Queue<string> convoQueue1 = new Queue<string>(new[]
         {
-            "Marie: Ah good choice! You read my mind monsieur",
-            "Kyle: Nah I'm just cool like that",
-            "Marie: So what do you do for a living?"
+            "Marié: Ah good choice! You read my mind monsieur",
+            "Connor: Glad you liked it!",
+            "Marié: So what do you do for a living?"
         });
-        string[] options1 = { "Software Developer", "Art Gallery Owner", "Stock Broker" };
+        string[] options1 = { "Software Developer", "Stock Broker", "Art Gallery Owner" }; // Correct answer is 3
 
-        Queue<string> conversation4 = new Queue<string>(new[]
+        Queue<string> convoQueue2 = new Queue<string>(new[]
         {
-            "You done homie"
+            "Marié: Really? I'm an art collector myself.",
+            "Connor: Wow that is interesting, you should visit our gallery sometime.",
+            "Marié: I will surely, who's your favorite artist?"
         });
-        Conversation convo1 = new Conversation(2, conversation1, options1);
-        Conversation convo4 = new Conversation(2, conversation4,  options1);
-        conversations = new[] { convo1, convo4 };
+        string[] options2 = { "Billy Bob", "Vincent Van Gogh", "Banksy" }; // Correct answer is 2
+
+        Queue<string> convoQueue3 = new Queue<string>(new[]
+        {
+            "Marié: Mine too! I have the 'Wheat Field with Cypresses' at my house.",
+            "Connor: No way... That is mine and my brother's favorite painting of Van Gogh.",
+            "Marié: Why don't you gentlemen come to my house and I'll show you my art collection.",
+            "Connor: We would love to!",
+            "..."
+        });
+
+        Conversation convo1 = new Conversation(2, convoQueue1, options1);
+        Conversation convo2 = new Conversation(3, convoQueue2, options2);
+        Conversation convo3 = new Conversation(2, convoQueue3, options1);
+
+        conversations = new[] { convo1, convo2, convo3 };
     }
 }

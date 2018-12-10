@@ -24,7 +24,10 @@ public class PlayerTheLastConBedroom : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if(StaticGameData.didGetEgg) {
-            instructions.text = "You have the egg now, find a way to exit the Marie's house";
+            instructions.text = "You have the egg now, exit the room";
+            if(transform.position.x <= 50) {
+                SceneManager.LoadScene(13);
+            }
             return;
         }
 
