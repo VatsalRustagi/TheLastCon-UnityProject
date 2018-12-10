@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Start Scene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Game Scene.unity
+    path: Assets/Scenes/Tutorial Bar Scene.unity
     guid: 5c0dbd822c45a4daaaf570c598dd63ac
   - enabled: 0
     path: 
@@ -36,9 +36,36 @@ EditorBuildSettings:
     path: Assets/Scenes/Final Con DInner Scene.unity
     guid: b5ec0d89f3bdc490395905ba3931fc2b
   - enabled: 1
-    path: Assets/Scenes/The Last Con.unity
+    path: Assets/Scenes/Entering the House Scene.unity
+    guid: 6a2567bab50ce47b5aafe8d3e45a823c
+  - enabled: 1
+    path: Assets/Scenes/Bedroom Scene.unity
     guid: 60e40cd6cdfdc4e02a53cf5eaf5a17f5
   - enabled: 1
     path: Assets/Scenes/Safe Scene.unity
     guid: 35aa1320645c54cf8a73d1226ff73e1e
+  - enabled: 1
+    path: Assets/Scenes/Exiting the House Scene.unity
+    guid: 10517193bd2ce46e2b09ee69411c90e8
+  - enabled: 1
+    path: Assets/Scenes/Motel Room Scene.unity
+    guid: c765e1ebed895472182e67a96c93b616
+  - enabled: 1
+    path: Assets/Scenes/Twin Steals Egg Scene.unity
+    guid: 93ed47549fa044f8f9f257119227e0b6
+  - enabled: 1
+    path: Assets/Scenes/Mafia Shooter Level Select Scene.unity
+    guid: cd0fab9209f8c4987a9179b4b41be165
+  - enabled: 1
+    path: Assets/Scenes/Mafia Shooter Game Scene.unity
+    guid: 67b14efe252a9431da297d11baefb014
+  - enabled: 1
+    path: Assets/Scenes/Mafia Shooter Game Lost.unity
+    guid: 542019537b9f247c79e78d64df28d0f5
+  - enabled: 1
+    path: Assets/Scenes/Last Scene.unity
+    guid: 363542bc500f34c6cb25c831e8a2556b
+  - enabled: 1
+    path: Assets/Scenes/End Game Scene.unity
+    guid: c2511fa89c10c4c669a81d19305c01e6
   m_configObjects: {}

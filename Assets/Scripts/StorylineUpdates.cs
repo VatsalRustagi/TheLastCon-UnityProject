@@ -12,12 +12,12 @@ public class StorylineUpdates : MonoBehaviour {
     [SerializeField] Image otherCharacter;
     [SerializeField] Image mainCharacter;
 
-    string[] storylines = { "The Last Con",
+    string[] storylines = { "The Last Con\n\nIn order to continue with instructions or dialogues press [Space Bar] throughout the game.",
                            "Once upon a time, there was a man of great intelligence and cunning who made his living by simply knowing what people’s deepest darkest desires are and fulfilling those for them, with a catch of course.",
                            "He ran his confidence tricks with perfection and finesse for years until be stumbled upon a big stakes opportunity. High risk, but high reward.",
                            "Unbeknownst to him, he was about to get involved in something much bigger than himself.",
         "He conned his way into the wrong crowd and cut to where he is right now: on the run, from the El Chapo Mafia, who is demanding he return their money back; with interest.",
-        "Press space to continue..."};
+        "Press [Space Bar] to continue..."};
     float lastTime;
 	// Use this for initialization
 	void Start () {
@@ -34,11 +34,11 @@ public class StorylineUpdates : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Time.time - lastTime > 2.0 && index < storylines.Length - 1) {
+        if (Input.GetKeyUp(KeyCode.Space) && index < storylines.Length - 1) {
             storyText.text = storylines[++index];
             lastTime = Time.time;
         } else if (index == storylines.Length -1 && Input.GetKeyDown(KeyCode.Space) && continueGame == false) {
-            // Continue to the next scene... The first motherfucking con
+            // Continue to the next scene... The first con
             storyText.text = "...";
             continueGame = true;
         }

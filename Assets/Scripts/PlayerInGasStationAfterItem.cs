@@ -13,11 +13,20 @@ public class PlayerInGasStationAfterItem : MonoBehaviour {
     bool playersAreClose = false;
     bool doneMakingTheCall = false;
 
-    string[] dialogues = {"Kyle: Hey I got the item from my car!",
-        "Stranger: Good! So here's the plan, lets do a pigeon drop with the item on" +
-        " the clerk inside",
-        "Kyle: Yeah sounds good! You make the call and I'll take care of 'finding' the item",
-        "Stranger: Sounds like a plan! I'll make the call now"
+
+    string[] dialogues = {"Connor: Hey I got the item from your car!",
+        "Future Connor: Good! So here's the plan, I'll call the clerk inside and " +
+        "tell her that I lost a valuable item in the store and that I'll reward her if she can find it",
+        "Connor: Ok sounds good, then I'll head inside and tell her that I found it and get some money for it",
+        "Future Connor: Sounds like a plan! I'll make the call now",
+        "*Phone Ringing*",
+        "Clerk: Hello, this is Trish, How may I help you?",
+        string.Format("Future Connor: Hi, my name is Jim and I lost my {0} in the store. " +
+                      "Could you please find it if possible, I'll give you $4000 if you do", StaticGameData.itemGrabbed),
+        "Clerk: Yes! I'll look around and hold it for you if I find it",
+        "*Ends call*",
+        "Future Connor: Ok we're set!",
+        "Go inside the store to finish the con"
     };
 
     // Use this for initialization

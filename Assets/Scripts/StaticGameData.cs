@@ -6,6 +6,7 @@ public class StaticGameData : MonoBehaviour {
     public static bool didGetNecklace = false;
     public static bool didGetWatch = false;
     public static bool didGetRing = false;
+    public static string itemGrabbed = "item";
 
     public static bool didGetEgg = false;
 

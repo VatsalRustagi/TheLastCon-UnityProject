@@ -24,8 +24,7 @@ public class PlayerActions : MonoBehaviour {
         if (Mathf.Abs(bottle.transform.position.x - transform.position.x) < 50 
             + width/2 && bottleFell == false)
         {
-            textObj.text = "You are now close to the bottle. " +
-                "Press the space bar to push it down.";
+            textObj.text = "Press [Space Bar] to interact with the bottle.";
 
             // If the player interacts with the bottle
             if (Input.GetKeyDown(KeyCode.Space))
@@ -33,7 +32,7 @@ public class PlayerActions : MonoBehaviour {
                 textObj.text = "You have successfully completed the tutorial. " +
                     "Throughout the game you can interact with different objects " +
                     "and each interaction will affect the outcome of the game." +
-                    "You can now exit this room through the door and start the game!";
+                    "You can now exit this room through the door and begin the last con!";
                 bottleFell = true;
                 bottle.transform.Translate(100f, -1*bottle.transform.position.y + 15f, 0f);
                 bottle.transform.Rotate(0f, 0f, -90f);
@@ -42,11 +41,8 @@ public class PlayerActions : MonoBehaviour {
         else {
             if (!bottleFell)
             {
-                textObj.text = "Welcome to The Last Con! This level " +
-                    "will take you through the basic controls in this game. " +
-                    "Use the right and left arrows to move about the room. " +
-                    "As you get close to some objects " +
-                    "you will have the option to interact with them";
+                textObj.text = "Welcome to The Last Con!\n\n" +
+                    " Use left and right arrow keys to move about the room. Move closer to objects to interact with them.";
             }
         }
 

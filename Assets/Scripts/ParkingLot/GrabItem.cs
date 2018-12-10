@@ -13,16 +13,19 @@ public class GrabItem : MonoBehaviour {
         {
             Debug.Log("Picked Ring");
             StaticGameData.didGetRing = true;
+            StaticGameData.itemGrabbed = "ring";
         } 
         else if (id == "watch")
         {
             Debug.Log("Picked Watch");
             StaticGameData.didGetWatch = true;
+            StaticGameData.itemGrabbed = "watch";
         } 
         else if (id == "pearls")
         {
             Debug.Log("Picked Pearls");
             StaticGameData.didGetNecklace = true;
+            StaticGameData.itemGrabbed = "pearls";
         }
         foreach (Button button in buttons) {
             button.gameObject.SetActive(false);

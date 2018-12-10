@@ -40,7 +40,7 @@ public class PlayerInParkingLot : MonoBehaviour {
             }
             else if(!isTrunkOpen && !itemPickedUp) 
             {
-                instructions.text = "You are close enough to the car to open the trunk. Press [Space Bar] to open the trunk";
+                instructions.text = "Press [Space Bar] to open the trunk";
             }
             else if (isTrunkOpen && !itemPickedUp)
             {
@@ -48,16 +48,14 @@ public class PlayerInParkingLot : MonoBehaviour {
             }
             else if (isTrunkOpen && itemPickedUp)
             {
-                instructions.text = "Now that you've picked the item, you can close the trunk by " +
-                    "pressing [Space Bar] and head back to the gas station";
+                instructions.text = "Now that you've picked the item, head back to the gas station";
+                isTrunkOpen = false;
+                car.sprite = carTrunkClosed;
 
-                if(Input.GetKeyUp(KeyCode.Space)) 
-                {
-                    isTrunkOpen = false;
-                    car.sprite = carTrunkClosed;
-                    instructions.text = "Head back to the gas station and meet up with your future self";
-                }
             }
+        }
+        else if(!itemPickedUp) {
+            instructions.text = "Walk towards the car to grab an item to do the pigeon drop con";
         }
 
 
